@@ -4,12 +4,252 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    padding: 2%;
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+/*------------- Welcome section ----------------*/
+.welcome-section{
+    padding: 5% 5% 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-image: url(img/top-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.welcome-section .left-col{
+    flex: 1;
+    margin-top: 5rem;
+    padding-right: 25%;
+}
+.title{
+    line-height: 35px;   
+    margin-bottom:40px; 
+}
+
+.sub-title{
+    margin-bottom: 15px;
+    color:orange;
+}
+.welcome-section .right-col{
+    flex: 1;
+}
+.welcome-section .right-col > img{
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    top: 4%;
+    left: 7%;
+}
+.mohacel{
+    color: hotpink;
+    font-size: 26px;
 }
 .title{
     font-size: 30px;
 }
 .title-slogan{
     color:indianred;
+}
+.btn{
+    border: none;
+    margin-top: 20px;
+}
+.link-btn{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    background-image: linear-gradient(45deg,lightSalmon,tomato);
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+/*------------- Dream section ----------------*/
+.dream-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    padding:  0% 5% 0% 10%;
+    background-image: url(img/dream-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.dream-left-col{
+    flex: 1;
+    
+}
+.dream-left-col img{
+    width: 100%;
+}
+.dream-right-col{
+    flex: 1;
+    margin-top: 5rem;
+    padding-right: 4rem;
+    
+}
+/*------------- Experience section ----------------*/
+.expc{
+    background-image: url(img/exp-bg.png);
+    background-repeat: no-repeat;
+    background-position:left;
+}
+.experience{
+    margin: -22rem 0 0 2rem;
+    font-size: 30px;
+}
+.experience-section{
+    margin-top: 0rem ;
+    margin-left: -8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cart{
+    margin-right: 3rem;
+    padding: 3rem 2rem;
+    box-shadow: 10px 10px 40px gray;
+    background-color: aliceblue;
+}
+.experience-left-col{
+    flex:1;
+    border-left: 8px solid;
+    border-image:linear-gradient(180deg,lightSalmon,tomato);
+    border-image-slice: 1;
+}
+.experience-right-col{
+    flex: 1;
+    border-left: 8px solid;
+    border-image:linear-gradient(180deg,blue,tomato);
+    border-image-slice: 1;
+}
+/*------------- Footer section ----------------*/
+.footer-section{
+    margin-top: 3rem;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50rem;
+}
+.footer-section div{
+    flex:1;
+}
+
+/* ******************Responsiveness for mobile**************** */
+@media screen and (max-width: 412px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    /*------------- Welcome section ----------------*/
+    .welcome-section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-image: url(img/top-banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo{
+        margin-left: 12rem;
+    }
+    .welcome-section .left-col{
+        flex: 1;
+        margin-top: 3rem;
+    }
+    .title{
+        line-height: 35px;   
+        margin-bottom:40px; 
+        font-size: 23px;;
+    }
+    
+    .sub-title{
+        margin-bottom: 15px;
+        color:orange;
+        font-size: 16px;;
+    }
+    .paragraph{
+        margin-right: -3rem;
+        line-height: 1.3rem;
+    }
+    .welcome-section .right-col{
+        flex: 1;
+    }
+    .welcome-section .right-col > img{
+        width: 100%;
+    }
+    /*------------- Dream section ----------------*/
+    .dream-section{
+        display: flex;
+        flex-direction: column;
+        background-image:none;
+    }
+    .dream-left-col{
+        order: 2; 
+        margin-bottom: 20rem;
+        margin-top: -2.5rem;
+    }
+    .dream-left-col img{
+        width: 100%;
+    }
+    .dream-right-col{
+        margin-top: 0px;
+    }
+    .dream-right-col h1{
+        margin-bottom: 1.3rem;
+    }
+    /*------------- Experience section ----------------*/
+    .expc{
+        background-image:none;
+    }
+    .experience{
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+    .experience-section{
+        margin-top: 0rem ;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .cart{
+        margin-left: 10rem;
+        margin-right: 1rem;
+        box-shadow: 10px 10px 40px gray;
+        background-color: aliceblue;
+    }
+    .experience-left-col{
+        flex:1;
+        border-left: 8px solid;
+        border-image:linear-gradient(180deg,lightSalmon,tomato);
+        border-image-slice: 1;
+    }
+    .experience-right-col{
+        flex: 1;
+        border-left: 8px solid;
+        border-image:linear-gradient(180deg,blue,tomato);
+        border-image-slice: 1;
+    }
+    /*------------- Footer section ----------------*/
+    .footer-section{
+        margin-top: 3rem;;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+    }
+    .footer-section div{
+        flex:1;
+    }
+    .footer-section .left-col{
+        text-align: center;
+        order:2;
+        margin-bottom: -1rem;
+    }
 }
